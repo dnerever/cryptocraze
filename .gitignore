@@ -1,3 +1,5 @@
 #Don't commit __pycache__ directory
 ./__pycache__
 
+#Exclude KEY storage files
+config.py
