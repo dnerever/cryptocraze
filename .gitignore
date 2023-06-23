@@ -2,4 +2,4 @@
 ./__pycache__
 
 #Exclude KEY storage files
-config.py
+.config.py
