@@ -1,0 +1,3 @@
+#Don't commit __pycache__ directory
+./__pycache__
+
