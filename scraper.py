@@ -20,8 +20,8 @@ session.headers.update(headers)
 try:
     response = session.get(url, params=parameters)
     rawData = json.loads(response.text)
-    rawStatus = json.loads(response)
-    print(rawData['status'])
+    # rawStatus = json.loads(response)
+    # print(rawData['status'])
     try:
         with open('output.json', 'w', encoding='utf-8') as output:
             json.dump(rawData, output, ensure_ascii=False, indent=4)
