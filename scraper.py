@@ -1,3 +1,5 @@
+#Notes: May need to switch output to a csv for Snowflake import
+
 import config   #import API Key
 from requests import Request, Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
