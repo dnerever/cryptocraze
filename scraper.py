@@ -42,16 +42,24 @@ except:
     print('**Failed to load to pandas**')
 
 try:
-    dataID = pandas.read_clipboard(
-        sep=",",
-        header="infer",
-        index_col=0,
-        names=["Order", "ID", "Category", "Sales", "Quantity", "Discount"],
-    )
-    pandas.set_option("display.max_rows", None, "display.max_columns", None)
-    print(dataID)
+    df.to_html('test.html')
+    # dataID = pandas.read_clipboard(
+    #     sep=",",
+    #     header="infer",
+    #     index_col=0,
+    #     names=["Order", "ID", "Category", "Sales", "Quantity", "Discount"],
+    # )
+    # pandas.set_option("display.max_rows", None, "display.max_columns", None)
     # print(dataID)
-    dataID.to_csv('clipboardData.csv')
+    df['data'].to_csv('dataOnly.csv')
+    df['data'].to_csv('dataOnly.csv')
+    # dataID.to_csv('clipboardData.csv')
     # print('* Data: ')
 except:
     print('**Failed to print panda data**')
+
+if df['status.error_message'].isna().all():
+    print('* Scrape success')
+else:
+    print('** Error scraping **')
+    print(df['status.error_message'])
