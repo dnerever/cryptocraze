@@ -51,7 +51,7 @@ try:
     # )
     # pandas.set_option("display.max_rows", None, "display.max_columns", None)
     # print(dataID)
-    df['data'].to_csv('dataOnly.csv')
+    df['data'].to_json('dataOnly.json')
     df['data'].to_csv('dataOnly.csv')
     # dataID.to_csv('clipboardData.csv')
     # print('* Data: ')
